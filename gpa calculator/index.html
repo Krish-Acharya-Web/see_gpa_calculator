@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEE GPA Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">Unofficial Student GPA Tool</p>
+        <h1>SEE GPA CALCULATOR</h1>
+      </div>
+      <div class="credit-chip">
+        Total Credits: <strong id="headerCredits">33.00</strong>
+      </div>
+    </header>
+
+    <section class="workspace" aria-label="SEE GPA calculator workspace">
+      <form class="subjects-panel" id="gpaForm" novalidate>
+        <div class="panel-heading">
+          <div>
+            <h2>Subject Marks</h2>
+            <p>Enter theory and practical marks for each subject.</p>
+          </div>
+          <div class="form-buttons">
+            <button type="submit" class="primary-button">Calculate GPA</button>
+            <button type="reset" class="ghost-button">Reset</button>
+          </div>
+        </div>
+
+        <section class="subject-card">
+          <div class="subject-title">
+            <h3>English</h3>
+            <span>5.00 credits</span>
+          </div>
+          <div class="marks-grid">
+            <label class="mark-field" for="english-theory">
+              <span>Theory</span>
+              <small>out of <span data-max-output="english-theory">75</span></small>
+              <input type="number" id="english-theory" data-subject-id="english" data-component="theory" min="0" max="75" step="0.01" inputmode="decimal" placeholder="0 - 75">
+              <em data-error-for="english-theory"></em>
+            </label>
+            <label class="mark-field" for="english-practical">
+              <span>Practical</span>
+              <small>out of <span data-max-output="english-practical">25</span></small>
+              <input type="number" id="english-practical" data-subject-id="english" data-component="practical" min="0" max="25" step="0.01" inputmode="decimal" placeholder="0 - 25">
+              <em data-error-for="english-practical"></em>
+            </label>
+          </div>
+        </section>
+
+        <section class="subject-card">
+          <div class="subject-title">
+            <h3>Nepali</h3>
+            <span>5.00 credits</span>
+          </div>
+          <div class="marks-grid">
+            <label class="mark-field" for="nepali-theory">
+              <span>Theory</span>
+              <small>out of <span data-max-output="nepali-theory">75</span></small>
+              <input type="number" id="nepali-theory" data-subject-id="nepali" data-component="theory" min="0" max="75" step="0.01" inputmode="decimal" placeholder="0 - 75">
+              <em data-error-for="nepali-theory"></em>
+            </label>
+            <label class="mark-field" for="nepali-practical">
+              <span>Practical</span>
+              <small>out of <span data-max-output="nepali-practical">25</span></small>
+              <input type="number" id="nepali-practical" data-subject-id="nepali" data-component="practical" min="0" max="25" step="0.01" inputmode="decimal" placeholder="0 - 25">
+              <em data-error-for="nepali-practical"></em>
+            </label>
+          </div>
+        </section>
+
+        <section class="subject-card">
+          <div class="subject-title">
+            <h3>Compulsory Math</h3>
+            <span>5.00 credits</span>
+          </div>
+          <div class="marks-grid">
+            <label class="mark-field" for="math-theory">
+              <span>Theory</span>
+              <small>out of <span data-max-output="math-theory">75</span></small>
+              <input type="number" id="math-theory" data-subject-id="math" data-component="theory" min="0" max="75" step="0.01" inputmode="decimal" placeholder="0 - 75">
+              <em data-error-for="math-theory"></em>
+            </label>
+            <label class="mark-field" for="math-practical">
+              <span>Practical</span>
+              <small>out of <span data-max-output="math-practical">25</span></small>
+              <input type="number" id="math-practical" data-subject-id="math" data-component="practical" min="0" max="25" step="0.01" inputmode="decimal" placeholder="0 - 25">
+              <em data-error-for="math-practical"></em>
+            </label>
+          </div>
+        </section>
+
+        <section class="subject-card">
+          <div class="subject-title">
+            <h3>Science</h3>
+            <span>5.00 credits</span>
+          </div>
+          <div class="marks-grid">
+            <label class="mark-field" for="science-theory">
+              <span>Theory</span>
+              <small>out of <span data-max-output="science-theory">75</span></small>
+              <input type="number" id="science-theory" data-subject-id="science" data-component="theory" min="0" max="75" step="0.01" inputmode="decimal" placeholder="0 - 75">
+              <em data-error-for="science-theory"></em>
+            </label>
+            <label class="mark-field" for="science-practical">
+              <span>Practical</span>
+              <small>out of <span data-max-output="science-practical">25</span></small>
+              <input type="number" id="science-practical" data-subject-id="science" data-component="practical" min="0" max="25" step="0.01" inputmode="decimal" placeholder="0 - 25">
+              <em data-error-for="science-practical"></em>
+            </label>
+          </div>
+        </section>
+
+        <section class="subject-card">
+          <div class="subject-title">
+            <h3>Social Studies</h3>
+            <span>5.00 credits</span>
+          </div>
+          <div class="marks-grid">
+            <label class="mark-field" for="social-theory">
+              <span>Theory</span>
+              <small>out of <span data-max-output="social-theory">75</span></small>
+              <input type="number" id="social-theory" data-subject-id="social" data-component="theory" min="0" max="75" step="0.01" inputmode="decimal" placeholder="0 - 75">
+              <em data-error-for="social-theory"></em>
+            </label>
+            <label class="mark-field" for="social-practical">
+              <span>Practical</span>
+              <small>out of <span data-max-output="social-practical">25</span></small>
+              <input type="number" id="social-practical" data-subject-id="social" data-component="practical" min="0" max="25" step="0.01" inputmode="decimal" placeholder="0 - 25">
+              <em data-error-for="social-practical"></em>
+            </label>
+          </div>
+        </section>
+
+        <section class="subject-card">
+          <div class="subject-title option-title">
+            <div>
+              <h3>Optional I</h3>
+              <span id="optionalOneCredits">4.00 credits</span>
+            </div>
+            <label class="select-field" for="optionalOneType">
+              <span>Subject</span>
+              <select id="optionalOneType">
+                <option value="other">Other Subject</option>
+                <option value="computer">Computer</option>
+              </select>
+            </label>
+          </div>
+          <div class="marks-grid">
+            <label class="mark-field" for="optional1-theory">
+              <span>Theory</span>
+              <small>out of <span data-max-output="optional1-theory">75</span></small>
+              <input type="number" id="optional1-theory" data-subject-id="optional1" data-component="theory" min="0" max="75" step="0.01" inputmode="decimal" placeholder="0 - 75">
+              <em data-error-for="optional1-theory"></em>
+            </label>
+            <label class="mark-field" for="optional1-practical">
+              <span>Practical</span>
+              <small>out of <span data-max-output="optional1-practical">25</span></small>
+              <input type="number" id="optional1-practical" data-subject-id="optional1" data-component="practical" min="0" max="25" step="0.01" inputmode="decimal" placeholder="0 - 25">
+              <em data-error-for="optional1-practical"></em>
+            </label>
+          </div>
+        </section>
+
+        <section class="subject-card">
+          <div class="subject-title">
+            <h3>Optional II</h3>
+            <span>4.00 credits</span>
+          </div>
+          <div class="marks-grid">
+            <label class="mark-field" for="optional2-theory">
+              <span>Theory</span>
+              <small>out of <span data-max-output="optional2-theory">75</span></small>
+              <input type="number" id="optional2-theory" data-subject-id="optional2" data-component="theory" min="0" max="75" step="0.01" inputmode="decimal" placeholder="0 - 75">
+              <em data-error-for="optional2-theory"></em>
+            </label>
+            <label class="mark-field" for="optional2-practical">
+              <span>Practical</span>
+              <small>out of <span data-max-output="optional2-practical">25</span></small>
+              <input type="number" id="optional2-practical" data-subject-id="optional2" data-component="practical" min="0" max="25" step="0.01" inputmode="decimal" placeholder="0 - 25">
+              <em data-error-for="optional2-practical"></em>
+            </label>
+          </div>
+        </section>
+      </form>
+
+      <aside class="results-panel" aria-live="polite">
+        <div class="results-header">
+          <p>Result</p>
+          <span id="resultState">Waiting for marks</span>
+        </div>
+
+        <div class="final-card" id="finalCard">
+          <p id="finalMessage">Fill all marks to calculate your GPA.</p>
+          <div class="final-score">
+            <strong id="finalGpa">--</strong>
+            <span id="finalGrade">--</span>
+          </div>
+        </div>
+
+        <div class="summary-grid">
+          <div>
+            <span>Total Credits</span>
+            <strong id="totalCredits">33.00</strong>
+          </div>
+          <div>
+            <span>Weighted Points</span>
+            <strong id="weightedPoints">--</strong>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Theory</th>
+                <th>Practical</th>
+                <th>GPA</th>
+                <th>Grade</th>
+              </tr>
+            </thead>
+            <tbody id="subjectResults">
+              <tr>
+                <td colspan="5">No calculation yet.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <p class="signature">- Krish Acharya</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
